@@ -159,7 +159,7 @@ package org.coderepos.webservices
 
         public function matchURI(uri:URI):Boolean
         {
-            return (uri.toString().match(/^http:\/\/(?:bit.ly|j.mp)\/\S+/) == null)
+            return (uri.toString().match(/^http:\/\/(?:bit.ly|j.mp)\/\S+/))
                 ? true : false;
         }
 
