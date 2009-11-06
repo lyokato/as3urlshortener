@@ -38,7 +38,7 @@ package org.coderepos.webservices
     import org.coderepos.webservices.events.URLShortenerEventResult;
 
     /*
-     * import org.coderepos.webservices.TinyURL;
+     * import org.coderepos.webservices.TinyURLClient;
      * import org.coderepos.webservices.IURLShortener;
      * import org.coderepos.webservices.events.URIShortenerEvent;
      * import com.adobe.net.URI;
@@ -118,7 +118,7 @@ package org.coderepos.webservices
             _isFetching = false;
             var res:String = _loader.data as String;
             var result:URLShortenerEventResult = new URLShortenerEventResult();
-            if (res.match(/^http:\/\/tinyurl.com\/\S+$/)) {
+            if (res.match(/^http:\/\/tinyurl\.com\/\S+$/)) {
                 result.url = new URI(res);
                 dispatchEvent(new URLShortenerEvent(URLShortenerEvent.SHORTENED, result));
             } else {
@@ -128,7 +128,7 @@ package org.coderepos.webservices
 
         public function matchURI(uri:URI):Boolean
         {
-            return ( uri.toString().match(/^http:\/\/tinyurl.com\/\S+/) )
+            return ( uri.toString().match(/^http:\/\/tinyurl\.com\/\S+/) )
                 ? true : false;
         }
 
