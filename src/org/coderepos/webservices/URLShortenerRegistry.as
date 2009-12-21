@@ -23,8 +23,8 @@ package org.coderepos.webservices
      * bitly.addEventListener(...);
      * ...
      * var registry:URLShortenerRegistry = new URLShortenerRegistry();
-     * regisry.register( tiny );
-     * regisry.register( bitly );
+     * registry.register( tiny );
+     * registry.register( bitly );
      *
      * var shortener:IURLShortener =
      *     registry.getShortenerForURI(uri);
